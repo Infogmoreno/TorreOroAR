@@ -1,27 +1,6 @@
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
        <head>
-        <style>
-   #audio{
-    position: absolute;
-    bottom: 30px;
-    left: 500px;
-    background-color:#3FB2D7;
-    opacity:1;
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-family:Arial;
-    display: inline-block;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 6px;
-        
-    }
-    #audio:hover{
-    opacity: 0.5;
-    }
-      </style>
+       
     </head>
     <body onload="init();">
         
@@ -43,7 +22,7 @@
     AR is not tracking!
   </button>
    
-      <div style='position: absolute; left: 25%; bottom: 20px; width:100%;  text-align: right; z-index: 1;'>
+      <div id=locu_btn" style='position: absolute; left: 25%; bottom: 20px; width:100%;  text-align: right; z-index: 1;'>
        <button slot="audio" id="audio">Locución</button>  
       </div>
  
@@ -66,6 +45,11 @@
       // Keep slider interactions from affecting the XR scene.
       ev.preventDefault();
     });
+        let button= document.querySelector("#locu_btn");
+        player= documente.querySelector("locucion");
+        button.addEventListener('click', function(){
+        player.setAttribute('src', '#locucion);
+     });
   </script>
 <style>
   /* This keeps child nodes hidden while the element loads */
@@ -196,6 +180,26 @@
   .slide:focus-visible {
     outline: 1px solid #4285f4;
   }
+    #audio{
+    position: absolute;
+    bottom: 30px;
+    left: 500px;
+    background-color:#3FB2D7;
+    opacity:1;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family:Arial;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+        
+    }
+    #audio:hover{
+    opacity: 0.5;
+    }    
 
 </style>
     </body>
