@@ -26,11 +26,11 @@
   </button>
    
       <div id=locu_btn" style='position: absolute; left: 25%; bottom: 20px; width:100%;  text-align: right; z-index: 1;'>
-       <button slot="audio" id="audio" audiohandler>Locución</button>  
+       <button slot="audio" id="audio">Locución</button>  
       </div>
 
 </model-viewer>
-<a-entity id="locu" sound="src: #locucion" autoplay="true"></a-entity>
+<a-entity id="locu" sound="src: #locucion" autoplay="true" audiohandler></a-entity>
 <!-- model viewer switcher -->
  <script type="module">
     const modelViewer = document.querySelector("model-viewer");
