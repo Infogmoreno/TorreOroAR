@@ -6,7 +6,7 @@
     <body onload="init();">
         
      <a-assets>
-            <audio id="sound" src="assets/LocuTorreOro.mp3" preload="auto"></audio>
+            <audio id="locucion" src="assets/LocuTorreOro.mp3" preload="auto"></audio>
         </a-assets>
    
        
@@ -30,7 +30,7 @@
       </div>
 
 </model-viewer>
-
+<a-entity id="locu" sound="src: #locucion" autoplay="false"></a-entity>
 <!-- model viewer switcher -->
  <script type="module">
     const modelViewer = document.querySelector("model-viewer");
@@ -49,7 +49,7 @@
       ev.preventDefault();
     });
         let button= document.querySelector("#locu_btn");
-        let player = document.querySelector('#locucion');                                              
+        let player = document.querySelector('#locu');                                              
         button.addEventListener('click', (e)=>{                                          
         player.components.sound.playSound();
      });
