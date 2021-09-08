@@ -46,8 +46,9 @@
       ev.preventDefault();
     });
         let button= document.querySelector("#locu_btn");
-        button.addEventListener('click', (e)=>{
-        let player= document.querySelector("#locucion").play();
+        let player = document.querySelector('#locucion');                                              
+        button.addEventListener('click', (e)=>{                                          
+        player.components.sound.playSound();
      });
   </script>
 <style>
