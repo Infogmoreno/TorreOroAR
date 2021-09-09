@@ -5,9 +5,7 @@
     </head>
     <body onload="init();">
         
-     <a-assets>
-            <audio id="locucion" src="assets/locuTorreOro.ogg" preload="auto" crossorigin="anonymous"></audio>
-        </a-assets>
+     
    
        
         
@@ -25,12 +23,9 @@
     AR is not tracking!
   </button>
    
-      <div id=locu_btn" style='position: absolute; left: 25%; bottom: 20px; width:100%;  text-align: right; z-index: 1;' audiohandler>
-       <button slot="audio" id="audio">Locución</button>  
-      </div>
-
+      
 </model-viewer>
-<a-entity id="locu" sound="src: #locucion" autoplay="true"></a-entity>
+
 <!-- model viewer switcher -->
  <script type="module">
     const modelViewer = document.querySelector("model-viewer");
@@ -48,28 +43,8 @@
       // Keep slider interactions from affecting the XR scene.
       ev.preventDefault();
     });
-        let button= document.querySelector("#locu_btn");
-        let player = document.querySelector('[locu]');                                              
-        button.addEventListener('click', (e)=>{                                          
-        player.components.sound.playSound();
-     });
-                                                      
-     AFRAME.registerComponent('audiohandler', {
-  init:function() {
-     let playing = false;
-     let audio = document.querySelector("#locu");
-     this.el.addEventListener('click', () => {
-          if(!playing) {
-              audio.play();
-           } else {
-              audio.pause();
-              audio.currentTime = 0;
-           }
-           playing = !playing;
-     });
-  }
-})                                                 
-  </script>
+                                                           
+   </script>
 <style>
   /* This keeps child nodes hidden while the element loads */
   :not(:defined) > * {
